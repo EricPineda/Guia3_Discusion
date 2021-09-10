@@ -19,24 +19,13 @@ const DATA = [
     {
         id: '3',
         title: 'Pasteles',
-        desc: 'Usualmente llevan papa, zanahoria,',
+        desc: 'Usualmente llevan papa, zanahoria y la carne molida o de res, pollo. Además de vegetales varios.',
         src: require('./src/img/pasteles.jpg'),
     },
 ];
 
-
-
-/*const Item = ({ title, img }) => (
-    <View style={styles.item}>
-        <Text style={styles.title}>{title}</Text>
-        <Image style={styles.img} source={img} />
-    </View>
-);
-*/
 const App = () => {
-    /* const renderItem = ({ item }) => (
-         <Item title={item.title} img={item.src} />
-     );*/
+   
 
     return (
         <ScrollView>
@@ -48,6 +37,8 @@ const App = () => {
 
                             <Card >
                             <Card.Title>{u.title}</Card.Title>
+                            <Card.Divider/>
+
                                 <View style={estilos.carta}>
                                 <Card.Image resizeMode="cover" source={u.src} style={estilos.imagen} ></Card.Image>
                                
@@ -81,8 +72,8 @@ const estilos = StyleSheet.create({
     carta: {
 
         
-        alignItems: "center", // ignore this - we'll come back to it
-        justifyContent: "center", // ignore this - we'll come back to it
+        alignItems: "center", 
+        justifyContent: "center", 
         flexDirection: "row",
        
     },
@@ -92,6 +83,8 @@ const estilos = StyleSheet.create({
         height: 100,
         borderRadius: 100,
         flex:1,
+        marginLeft:5,
+        marginRight:5,
 
     },
     titulo: {
@@ -100,6 +93,9 @@ const estilos = StyleSheet.create({
     },
     desc: {
         flex:3,
+        marginLeft:5,
+        marginRight:5,
+        textAlign:'justify',
     },
 });
 
